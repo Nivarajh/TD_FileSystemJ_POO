@@ -1,0 +1,18 @@
+@startuml
+
+
+":Jean_Dupont" -> ":Accueil": Accueillir (Enregistrement)
+Activate ":Accueil"
+
+create Dossier
+":Accueil" -> Dossier:
+
+":Accueil" -> ":Medecin": Consulter() (Consultation Dossier)
+
+":Medecin" -> ":Accueil": Resultat_Consultation
+
+":Accueil" -> ":Jean_Dupont": Return_Dossier
+
+Deactivate ":Accueil"
+
+@enduml

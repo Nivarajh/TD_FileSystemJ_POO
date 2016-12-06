@@ -1,0 +1,15 @@
+@startuml
+
+
+create ":Amende"
+
+Activate ":Smartphone"
+
+":Smartphone" -> ":Amende": Emettre amende catA
+
+":Smartphone" -> ":Commissariat": Enregistrer()
+
+Deactivate ":Smartphone"
+":Commissariat" ->> ":StatCommissariat": Incrementer()
+
+@enduml
